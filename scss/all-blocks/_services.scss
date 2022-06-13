@@ -1,0 +1,115 @@
+.services {
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    &__right {
+        padding: 273px 20px;
+        width: 100%;
+        max-width: 541px;
+        border-radius: 15px;
+        background-image: url("../../images/services-left-bg.png");
+        background-repeat: no-repeat;
+    }
+
+    &__right:hover {
+        opacity: 0.5;
+    }
+
+    &__item-heading {
+        margin: 0 0 24px;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 2px;
+    }
+
+    &__item-desc {
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__left-item {
+        width: 100%;
+        max-width: 541px;
+        border-radius: 15px;
+    }
+
+    &__left-item:hover {
+        opacity: 0.5;
+    }
+
+    .left-item-one {
+        padding: 107px 143px;
+        background-image: url("../../images/left-item-one-bg.png");
+        background-repeat: no-repeat;
+    }
+
+    .left-item-two {
+        padding: 107px 81px;
+        background-image: url("../../images/left-item-two-bg.png");
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .services {
+        padding: 100px 0;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__right {
+            padding: 90px 20px;
+            max-width: 100%;
+            background-size: cover;
+            margin-bottom: 24px;
+        }
+
+        &__left-item {
+            width: 100%;
+            max-width: 100%
+        }
+
+        .left-item-one {
+            padding: 90px 20px;
+            margin-bottom: 24px;
+            background-size: cover;
+        }
+
+        .left-item-two {
+            padding: 90px 20px;
+            background-size: cover;
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .services {
+        &__right {
+            padding: 70px 20px;
+        }
+
+        .left-item-one {
+            padding: 70px 20px;
+        }
+
+        .left-item-two {
+            padding: 70px 20px;
+        }
+    }
+}

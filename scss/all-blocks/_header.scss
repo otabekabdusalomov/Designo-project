@@ -1,0 +1,95 @@
+.header {
+    padding: 64px 0 37px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item + &__item {
+        margin-left: 42px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 14px;
+        color: #333136;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+    &__hamburger {
+        display: none;
+        width: 20px;
+        height: 20px;
+        background-image: url("../images/bars-solid.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .header{
+      position: relative;
+
+      &__hamburger {
+        display: inline-block;
+      }
+
+      &__nav {
+        display: none;
+      }
+    }
+
+    .header--open .header__item {
+        margin: 15px auto;
+    }
+
+    .header--open .header__nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #E7816B;
+      background-image: url("../../images/card-bg-img.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+    }
+
+    .header--open .header__list {
+      flex-direction: column;
+    }
+
+    .header--open .header__link {
+      color: white;
+    }
+
+    .header--open .header__hamburger {
+      background-image: url("../images/times-solid.svg");
+    }
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    padding: 37px 0  20px;
+  }
+}
